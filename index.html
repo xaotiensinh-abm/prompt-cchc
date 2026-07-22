@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d1b3e">
-<title>Prompt CCHC · Sổ tay tiếng Việt · ABM</title>
+<title>30 Prompt Văn Bản Hành Chính · Sổ tay · ABM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -160,11 +160,57 @@
   footer { border-top: 1px solid var(--line); padding: 24px 0 48px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
   @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; }
-    .doc-layout { grid-template-columns: 1fr; }
+    html { scroll-padding-top: 90px; }
+    body { font-size: 15px; }
+    .shell { width: calc(100% - 32px); }
+    .topbar { min-height: 56px; gap: 12px; }
+    .brand { font-size: 12px; gap: 8px; }
+    .brand img { width: 30px; height: 30px; }
+    .brand small { display: none; }
+    .topnav { gap: 12px; font-size: 10px; }
+    .topnav .source { padding: 5px 10px; font-size: 10px; }
+    .quicknav a { min-height: 38px; padding: 0 10px; font-size: 10px; gap: 4px; }
+    .quicknav b { font-size: 8px; }
+    .hero { grid-template-columns: 1fr; padding-block: 40px 48px; gap: 32px; }
+    .display-title { font-size: clamp(38px, 11vw, 56px); }
+    .hero h2 { font-size: clamp(20px, 5vw, 28px); margin: 20px 0 10px; }
+    .lede { font-size: 14px; }
+    .actions { gap: 8px; }
+    .button { min-height: 40px; padding: 8px 14px; font-size: 11px; }
+    .metric-ticket { padding: 28px 18px 20px; transform: none; }
+    .metrics strong { font-size: 24px; }
+    .doc-layout { grid-template-columns: 1fr; padding-block: 32px 48px; }
     .toc { display: none; }
-    .feature-grid, .role-profile-grid { grid-template-columns: 1fr; }
-    .display-title { font-size: clamp(34px, 10vw, 60px); }
+    .section { padding-bottom: 48px; scroll-margin-top: 90px; }
+    .chapter-title { gap: 10px; }
+    .chapter-title>span { width: 34px; height: 34px; font-size: 10px; }
+    .chapter-title h2 { font-size: clamp(22px, 5vw, 28px); }
+    .intro { font-size: 14px; }
+    .feature-grid { grid-template-columns: 1fr; gap: 10px; }
+    .feature-card { padding: 16px; }
+    .feature-card h3 { font-size: 14px; }
+    .role-profile-grid { grid-template-columns: 1fr; }
+    .role-profile>summary { min-height: 70px; padding: 12px; }
+    .role-summary b { font-size: 14px; }
+    .notice { padding: 14px 16px; }
+    .step { grid-template-columns: 40px minmax(0,1fr); gap: 10px; padding: 14px 0; }
+    .step>span { width: 30px; height: 30px; font-size: 10px; }
+    .step h3 { font-size: 14px; }
+    .code-block pre { font-size: 10px; padding: 12px; }
+    footer { flex-direction: column; gap: 4px; font-size: 10px; padding: 16px 0 32px; }
+    footer span:last-child { display: none; }
+  }
+
+  @media (max-width: 480px) {
+    .topbar { flex-wrap: wrap; }
+    .topnav .source { display: none; }
+    .quicknav a { padding: 0 8px; font-size: 9px; }
+    .display-title { font-size: 34px; }
+    .hero h2 { font-size: 18px; }
+    .metrics strong { font-size: 20px; }
+    .metrics div { padding: 10px; }
+    .flow { gap: 3px; }
+    .flow span { font-size: 8px; padding: 3px 6px; }
   }
 </style>
 </head>
@@ -175,7 +221,7 @@
 <header class="topbar shell">
   <a href="#" class="brand">
     <img src="data:image/png;base64,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" alt="ABM" width="38" height="38" style="background:var(--navy);border-radius:8px;padding:4px">
-    <span>Prompt CCHC <small>Sổ tay tiếng Việt · ABM</small></span>
+    <span>Prompt VBHC <small>Sổ tay văn bản hành chính · ABM</small></span>
   </a>
   <nav class="topnav">
     <a href="#quicknav">Prompt</a>
@@ -201,8 +247,8 @@
 
 <section class="hero shell" id="hero">
   <div class="hero-copy">
-    <span class="eyebrow">Prompt CCHC · Sổ tay</span>
-    <h1 class="display-title">PROMPT<span>CCHC</span></h1>
+    <span class="eyebrow">30 Prompt · Văn Bản Hành Chính</span>
+    <h1 class="display-title">30 PROMPT<span>VĂN BẢN HÀNH CHÍNH</span></h1>
     <h2>Từ một cán bộ loay hoay với văn bản — đến 30 "câu lệnh" AI làm thay 80% công việc giấy tờ.</h2>
     <p class="lede">Sổ tay này đóng gói 30 prompt chuyên dụng cho công tác hành chính Việt Nam. Mỗi prompt là một "chuyên gia AI" với vai trò, quy trình, tiêu chuẩn đầu ra và ranh giới đỏ rõ ràng.</p>
     <div class="actions">
@@ -288,8 +334,8 @@
       </details>
 
       <details class="role-profile" style="--role-color:#c84d4d;margin-bottom:12px">
-        <summary><span class="role-summary"><small>Nhóm D · 2 prompt</small><b>🔐 Bảo mật & Triển khai</b><span>Ẩn danh dữ liệu, lập lộ trình CCHC 90 ngày.</span></span></summary>
-        <div><h5>Danh sách prompt</h5><ul><li><strong>19.</strong> Ẩn danh dữ liệu nhạy cảm trước khi dùng AI ⚠️ BẮT BUỘC</li><li><strong>20.</strong> Lộ trình cải cách hành chính 90 ngày</li></ul></div>
+        <summary><span class="role-summary"><small>Nhóm D · 2 prompt</small><b>🔐 Bảo mật & Triển khai</b><span>Ẩn danh dữ liệu, lập lộ trình VBHC 90 ngày.</span></span></summary>
+        <div><h5>Danh sách prompt</h5><ul><li><strong>19.</strong> Ẩn danh dữ liệu nhạy cảm trước khi dùng AI ⚠️ BẮT BUỘC</li><li><strong>20.</strong> Lộ trình triển khai VBHC 90 ngày</li></ul></div>
       </details>
 
       <details class="role-profile" style="--role-color:#7c3aed;margin-bottom:12px">
@@ -325,7 +371,7 @@
         <article class="feature-card"><span>A</span><h3>Văn bản</h3><p>Soạn thảo, rà soát NĐ 30, chuẩn hóa, tóm tắt. <strong>8 prompt.</strong></p></article>
         <article class="feature-card"><span>B</span><h3>Pháp lý & Báo cáo</h3><p>Tra cứu luật, tổng hợp, phân loại, trích xuất, phân tích số liệu. <strong>7 prompt.</strong></p></article>
         <article class="feature-card"><span>C</span><h3>Quy trình</h3><p>Workflow, sơ đồ Mermaid, đặc tả Excel. <strong>3 prompt.</strong></p></article>
-        <article class="feature-card"><span>D</span><h3>Bảo mật</h3><p>Ẩn danh dữ liệu, lộ trình CCHC. <strong>2 prompt.</strong></p></article>
+        <article class="feature-card"><span>D</span><h3>Bảo mật</h3><p>Ẩn danh dữ liệu, lộ trình VBHC. <strong>2 prompt.</strong></p></article>
         <article class="feature-card"><span>E</span><h3>Dịch vụ công</h3><p>Thủ tục, tiếp dân, đánh giá CBCC, đào tạo, hợp đồng. <strong>10 prompt.</strong></p></article>
       </div>
     </section>
@@ -361,7 +407,7 @@
 
 <footer class="shell">
   <span>© 2026 ABM — DũngTQ · 0976202028</span>
-  <span>Prompt CCHC v2.0 · Sổ tay tiếng Việt</span>
+  <span>30 Prompt VBHC v2.0</span>
 </footer>
 
 <script>
