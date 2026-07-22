@@ -445,5 +445,32 @@ hr { border: none; border-top: 1px solid var(--line); margin: 0; }
   <span class="ft-info">© 2026 <a href="#">DũngTQ</a> · 0976202028 · NĐ 30/2020 · Đề án 06</span>
 </footer>
 
+<script>
+const nav = document.getElementById('nav');
+const links = [...nav.querySelectorAll('a')];
+const sections = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+
+function updateActive() {
+  const scrollY = window.scrollY + 120;
+  let current = sections[0];
+  for (const s of sections) {
+    if (s.offsetTop <= scrollY) current = s;
+  }
+  links.forEach(a => a.classList.remove('active'));
+  const active = links.find(a => a.getAttribute('href') === '#' + current.id);
+  if (active) active.classList.add('active');
+}
+
+window.addEventListener('scroll', updateActive, { passive: true });
+updateActive();
+
+links.forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.getElementById(a.getAttribute('href').slice(1));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>
